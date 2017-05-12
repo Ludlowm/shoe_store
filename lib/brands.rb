@@ -1,7 +1,7 @@
 class Brand < ActiveRecord::Base
   has_and_belongs_to_many(:stores)
   validates :name, presence: true
-  validates(:name, {:presence => true, :length => { :maximum => 20 }})
+  validates(:name, {:presence => true, :length => { :maximum => 100 }})
   validates_uniqueness_of   :name
   before_save(:capitalize_letter)
 

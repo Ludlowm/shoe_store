@@ -19,8 +19,8 @@ describe(Store) do
     expect(test_store.save()).to(eq(false))
   end
 
-  it("ensures the length of store name is at most 20 characters") do
-    test_store = Store.new({:name => "a".*(21)})
+  it("ensures the length of store name is at most 100 characters") do
+    test_store = Store.new({:name => "a".*(101)})
     expect(test_store.save()).to(eq(false))
   end
 
