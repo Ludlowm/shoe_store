@@ -1,8 +1,8 @@
-<h2> <%= @brand.name() %></h2>
+<h2> <%= @brand.name() %> <%= @brand.price() %></h2>
 <hr>
 
 <% if @brand_stores.any? %>
-  <h3> Current brands: </h3>
+  <h3> Current stores that hold this brand: </h3>
   <ul>
     <%@brand_stores.each do |store|%>
       <li><%=store.name%></li>
@@ -10,8 +10,8 @@
   </ul>
 
 <% else %>
-    <p>This brand has no stores it belongs to</p>
-    <p><a href="/stores">Add a brand to database</a></p>
+    <p>This brand has no stores</p>
+    <p><a href="/stores">Add a store to database</a></p>
 <% end %>
 <hr>
 
@@ -37,4 +37,5 @@
   <% end %>
   <button type="submit">Submit</button>
 </form>
+
 <hr>

@@ -6,7 +6,7 @@
 <p>There are currently no brands in the database</p>
 <% else %>
 
-<p>Current Brands:</p>
+<p>Current brands:</p>
 <ul>
   <% @brands.each() do |brand| %>
   <li><a href="/brands/<%= brand.id() %>"><%= brand.name() %></a></li>
@@ -19,5 +19,7 @@
 <form action="/brands" method="post">
   <label for="brand_name">Brand Name:  </label>
   <input type="text" name="brand_name" id="brand_name">
+  <label for="price">Price:</label>
+  <input type="text" name="price">
   <button type="submit">Add Brand</button>
 </form>

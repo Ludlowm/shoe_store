@@ -2,7 +2,7 @@
 <hr>
 
 <% if @store_brands.any? %>
-  <h3> Current brands: </h3>
+  <h3> Current brands in this store: </h3>
   <ul>
     <%@store_brands.each do |brand|%>
       <li><%=brand.name%></li>
