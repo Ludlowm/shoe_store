@@ -1,6 +1,11 @@
 development:
   adapter: postgresql
   database: shoe_store_development
+  username: ludlo
+  password: london
+
 test:
   adapter: postgresql
   database: shoe_store_test
+  username: ludlo
+  password: london
