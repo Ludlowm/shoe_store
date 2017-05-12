@@ -1,18 +1,18 @@
-# <!--PROJECT NAME HERE-->
+# Shoe Store
 
-<!--PROJECT DESCRIPTION HERE-->
+Shoe store that you can add a new store or shoe brand and then be able to add the shoe brand to the store and the store to each shoe brand.
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby
 Bundler
 
 ### Installing
 
-Installation is quick and easy! First you can open this link <!--HEROKU LINK HERE--> to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
+Installation is easy. All you have to do is run rake db:create, then rake db:migrate. To make sure the specs pass also run rake db:test:prepare. That should allow for you to see the database along with the tables that are created.
 
 ## Built With
 
@@ -26,13 +26,13 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 ## Authors
 
-* <!--YOUR NAME HERE-->
+* Marko Ludlow
 
 ## License
 
 MIT License
 
-Copyright (c) <!--YOUR NAME & YEAR HERE-->
+Copyright (c) Marko Ludlow 2017
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,4 +51,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
