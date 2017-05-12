@@ -1,18 +1,16 @@
 require "spec_helper"
 
-require "spec_helper"
-
 describe(Store) do
   it("can have an brand") do
-    test_store = Store.new(name: "Pasta with tomato")
-    test_brand = test_store.brands.new(name: "Tomato")
+    test_store = Store.new(name: "Walmart")
+    test_brand = test_store.brands.new(name: "Nike")
     expect(test_store.brands()).to(eq([test_brand]))
   end
 
   it("can have multiple brands") do
-    test_store = Store.new(name: "Tomato")
-    test_brand1 = test_store.brands.new(name: "Tomato")
-    test_brand2 = test_store.brands.new(name: "Chicken")
+    test_store = Store.new(name: "Walmart")
+    test_brand1 = test_store.brands.new(name: "Nike")
+    test_brand2 = test_store.brands.new(name: "Adidas")
     expect(test_store.brands()).to(eq([test_brand1,test_brand2]))
   end
 
