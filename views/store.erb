@@ -1,0 +1,40 @@
+<h2>store: <%= @store.name() %></h2>
+<hr>
+
+<% if @store_brands.any? %>
+  <h3> Current brands: </h3>
+  <ul>
+    <%@store_brands.each do |brand|%>
+      <li><%=brand.name%></li>
+    <%end%>
+  </ul>
+
+<% else %>
+    <p>There are currently no brands in this store.</p>
+    <p><a href="/stores">Add an brand to the database</a></p>
+<% end %>
+<hr>
+
+<h3>Update store information:</h3>
+  <form action="/stores/<%= @store.id() %>" method="post">
+  <input name="_method" value="patch" type="hidden">
+  <% if @unassigned_brands.any? %>
+    <label>Add brands:</label><br>
+    <% @unassigned_brands.each do |brand|%>
+      <label>
+        <%="<input type='checkbox' name='brands_to_add[]' value='#{brand.id}'> #{brand.name}"%>
+      </label><br>
+    <% end %>
+  <% end %>
+
+  <% if @store_brands.any? %>
+    <label>Remove brands from store </label><br>
+    <% @store_brands.each do |brand|%>
+      <label>
+        <%="<input type='checkbox' name='brands_to_delete[]' value='#{brand.id}'>#{brand.name}"%>
+      </label><br>
+    <% end %>
+  <% end %>
+  <button type="submit">Submit</button>
+</form>
+<hr>
